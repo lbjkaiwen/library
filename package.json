@@ -1,0 +1,39 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{css,less,scss,sass,html,htm,vue,yml,yaml,json,md}": [
+      "prettier --write"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.11.0",
+  "devDependencies": {
+    "@changesets/cli": "^2.29.4",
+    "eslint": "^9.26.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.5.3"
+  },
+  "dependencies": {
+    "lint-staged": "^16.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
