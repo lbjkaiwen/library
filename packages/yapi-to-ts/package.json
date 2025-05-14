@@ -1,14 +1,19 @@
 {
   "name": "@xz/yapi-to-ts",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
+  "main": "./dist/yapi2ts.umd.cjs",
+  "module": "./dist/yapi-to-ts.js",
+  "files": [
+    "dist"
+  ],
   "bin": {
-    "ytt": "src/cli.ts"
+    "ytt": "./dist/yapi-to-ts.js"
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build ",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -31,6 +36,7 @@
     "globals": "^16.0.0",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.30.1",
-    "vite": "^6.3.5"
+    "vite": "^6.3.5",
+    "vite-plugin-dts": "^4.5.3"
   }
 }
